@@ -50,7 +50,7 @@ def handle_message(event):
     r = '看不懂'
 
 #貼圖回復
-    if mse == '貼圖':
+    if msg == '貼圖':
         StickerSendMessage(
             package_id='11537',
             sticker_id='52002758'
