@@ -53,10 +53,19 @@ def handle_message(event):
         r = 'hello'
     elif msg == '吃飯了嗎':
         r = '還沒'
-
+    elif msg == 'amada':
+        r = '是妹特某'
+# 文字訊息回復
+    # line_bot_api.reply_message(
+    #     event.reply_token,
+    #     TextSendMessage(text=r))
+#貼圖回復
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=r))
+        tickerSendMessage(
+    package_id='11537',
+    sticker_id='52002758'
+    ))
 
 if __name__ == "__main__":
     app.run()
