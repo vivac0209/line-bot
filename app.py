@@ -51,15 +51,11 @@ def handle_message(event):
 
 #貼圖回復
     if msg == '貼圖':
-        StickerSendMessage(
-            package_id='11537',
-            sticker_id='52002758'
-    )
-
-        line_bot_api.reply_message(
+        ine_bot_api.reply_message(
             event.reply_token,
-            StickerSendMessage)
-        
+            StickerSendMessage(
+                package_id='11537',
+                sticker_id='52002758'))
 
     if msg in ['hi' , 'Hi']:
         r = 'hello'
